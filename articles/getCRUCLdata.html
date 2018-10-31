@@ -73,7 +73,7 @@
       <h1>getCRUCLdata</h1>
                         <h4 class="author">Adam H. Sparks</h4>
             
-            <h4 class="date">2018-10-30</h4>
+            <h4 class="date">2018-10-31</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ropensci/getCRUCLdata/blob/master/vignettes/getCRUCLdata.Rmd"><code>vignettes/getCRUCLdata.Rmd</code></a></small>
       <div class="hidden name"><code>getCRUCLdata.Rmd</code></div>
@@ -163,7 +163,7 @@
 <div id="plotting-data-from-the-tidy-dataframe" class="section level4">
 <h4 class="hasAnchor">
 <a href="#plotting-data-from-the-tidy-dataframe" class="anchor"></a>Plotting data from the tidy dataframe</h4>
-<p>Now that we have the data, we can plot it easily using <a href="http://ggplot2.org"><em>ggplot2</em></a> and the <a href="https://CRAN.R-project.org/package=viridis"><em>viridis</em></a> package for the colour scale.</p>
+<p>Now that we have the data, we can plot it easily using [<em>ggplot2</em>] and the [<em>viridis</em>] package for the colour scale.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">"ggplot2"</span>)) {</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="kw">install.packages</span>(ggplot2)</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">}</a>
@@ -174,20 +174,20 @@
 <a class="sourceLine" id="cb3-8" data-line-number="8"><span class="kw">library</span>(ggplot2)</a>
 <a class="sourceLine" id="cb3-9" data-line-number="9"><span class="kw">library</span>(viridis)</a></code></pre></div>
 <p>Now that the required packages are installed and loaded, we can generate a figure of temperatures using <em>ggplot2</em> to map the 12 months.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(<span class="dt">data =</span> t, <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> lon, <span class="dt">y =</span> lat)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_tile">geom_raster</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">fill =</span> tmp)) <span class="op">+</span></a>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="dt">data =</span> t, <span class="kw"><a href="ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> lon, <span class="dt">y =</span> lat)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/geom_tile.html">geom_raster</a></span>(<span class="kw"><a href="ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">fill =</span> tmp)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/viridis/topics/scale_viridis">scale_fill_viridis</a></span>(<span class="dt">option =</span> <span class="st">"inferno"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/coord_map">coord_quickmap</a></span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">ggtitle</a></span>(<span class="st">"Global Mean Monthly Temperatures 1961-1990"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/facet_wrap">facet_wrap</a></span>(<span class="op">~</span><span class="st"> </span>month, <span class="dt">nrow =</span> <span class="dv">4</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/coord_map.html">coord_quickmap</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"Global Mean Monthly Temperatures 1961-1990"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span>(<span class="op">~</span><span class="st"> </span>month, <span class="dt">nrow =</span> <span class="dv">4</span>)</a></code></pre></div>
 <div class="figure">
 <img src="README-unnamed-chunk-6-1.png" alt="Plot of global mean monthly temperatures 1961-1990"><p class="caption">Plot of global mean monthly temperatures 1961-1990</p>
 </div>
 <p>We can also generate a violin plot of the same data to visualise how the temperatures change throughout the year.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(<span class="dt">data =</span> t, <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> month, <span class="dt">y =</span> tmp)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_violin">geom_violin</a></span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Temperature (˚C)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"Global Monthly Mean Land Surface Temperatures From 1960-1991"</span>,</a>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="dt">data =</span> t, <span class="kw"><a href="ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> month, <span class="dt">y =</span> tmp)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Temperature (˚C)"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="dt">title =</span> <span class="st">"Global Monthly Mean Land Surface Temperatures From 1960-1991"</span>,</a>
 <a class="sourceLine" id="cb5-5" data-line-number="5">       <span class="dt">subtitle =</span> <span class="st">"Excludes Antarctica"</span>)</a></code></pre></div>
 <div class="figure">
 <img src="README-unnamed-chunk-7-1.png" alt="Violin plot of global mean temperatures 1961-1990"><p class="caption">Violin plot of global mean temperatures 1961-1990</p>
@@ -205,7 +205,7 @@
 <div id="creating-raster-stacks-for-use-in-r-and-saving-for-use-in-another-gis" class="section level3">
 <h3 class="hasAnchor">
 <a href="#creating-raster-stacks-for-use-in-r-and-saving-for-use-in-another-gis" class="anchor"></a>Creating raster stacks for use in R and saving for use in another GIS</h3>
-<p>For working with spatial data, <em>getCRUCLdata</em> provides a function that create lists of <a href="https://CRAN.R-project.org/package=raster"><em>raster</em></a> stacks of the data.</p>
+<p>For working with spatial data, <em>getCRUCLdata</em> provides a function that create lists of [<em>raster</em>] stacks of the data.</p>
 <p>The <code><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_stack">get_CRU_stack()</a></code> functions provide similar functionality to <code><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_df">get_CRU_df()</a></code>, but rather than returning a tidy data frame, it returns a list of <code><a href="http://www.rdocumentation.org/packages/raster/topics/stack">raster::stack()</a></code> objects for use in an R session.</p>
 <p>The <code><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_stack">get_CRU_stack()</a></code> function automates the download process and creates a <code><a href="http://www.rdocumentation.org/packages/raster/topics/stack">raster::stack()</a></code> object of the CRU CL v. 2.0 climatology elements. Illustrated here is creating a <code><a href="http://www.rdocumentation.org/packages/raster/topics/stack">raster::stack()</a></code> of all CRU CL v. 2.0 climatology elements available.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">CRU_stack &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_stack">get_CRU_stack</a></span>(<span class="dt">pre =</span> <span class="ot">TRUE</span>,</a>
