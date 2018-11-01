@@ -73,7 +73,7 @@
       <h1>getCRUCLdata</h1>
                         <h4 class="author">Adam H. Sparks</h4>
             
-            <h4 class="date">2018-10-31</h4>
+            <h4 class="date">2018-11-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ropensci/getCRUCLdata/blob/master/vignettes/getCRUCLdata.Rmd"><code>vignettes/getCRUCLdata.Rmd</code></a></small>
       <div class="hidden name"><code>getCRUCLdata.Rmd</code></div>
@@ -86,7 +86,7 @@
 <h2 class="hasAnchor">
 <a href="#introduction-to-getcrucldata" class="anchor"></a>Introduction to <em>getCRUCLdata</em>
 </h2>
-<p>The <em>getCRUCLdata</em> package provides functions that automate importing CRU CL v. 2.0 climatology data into R, facilitate the calculation of minimum temperature and maximum temperature, and formats the data into a <a href="http://vita.had.co.nz/papers/tidy-data.html">tidy data frame</a> as a <a href="https://www.rdocumentation.org/packages/tibble/versions/1.2"><code><a href="http://www.rdocumentation.org/packages/tibble/topics/tibble">tibble::tibble()</a></code></a> or a <a href="https://www.rdocumentation.org/packages/base/versions/3.4.0/topics/list"><code>list()</code></a> of <a href="https://www.rdocumentation.org/packages/raster/versions/2.5-8/topics/stack"><code><a href="http://www.rdocumentation.org/packages/raster/topics/stack">raster::stack()</a></code></a> objects for use in an R session.</p>
+<p>The <em>getCRUCLdata</em> package provides functions that automate importing CRU CL v. 2.0 climatology data into R, facilitate the calculation of minimum temperature and maximum temperature, and formats the data into a <a href="http://vita.had.co.nz/papers/tidy-data.html">tidy data frame</a> as a <code>tibble</code> or a <code>list</code> of <em>raster</em> <code>stack</code> objects for use.</p>
 <p>CRU CL v. 2.0 data are a gridded climatology of 1961-1990 monthly means released in 2002 and cover all land areas (excluding Antarctica) at 10 arcminutes (0.1666667 degree) resolution. For more information see the description of the data provided by the University of East Anglia Climate Research Unit (CRU), <a href="https://crudata.uea.ac.uk/cru/data/hrg/tmc/readme.txt" class="uri">https://crudata.uea.ac.uk/cru/data/hrg/tmc/readme.txt</a>.</p>
 </div>
 <div id="changes-to-original-cru-cl-v--2-0-data" class="section level2">
@@ -143,7 +143,7 @@
 <div id="creating-tidy-data-frames-for-use-in-r" class="section level3">
 <h3 class="hasAnchor">
 <a href="#creating-tidy-data-frames-for-use-in-r" class="anchor"></a>Creating tidy data frames for use in R</h3>
-<p>The <code><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_df">get_CRU_df()</a></code> function automates the download process and creates tidy data frames as a <a href="https://github.com/tidyverse/tibble"><em>tibble</em></a> of the CRU CL v. 2.0 climatology elements.</p>
+<p>The <code><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_df">get_CRU_df()</a></code> function automates the download process and creates tidy data frames as a <em>tibble</em> of the CRU CL v. 2.0 climatology elements.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(getCRUCLdata)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">CRU_data &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/getCRUCLdata/topics/get_CRU_df">get_CRU_df</a></span>(<span class="dt">pre =</span> <span class="ot">TRUE</span>,</a>
@@ -163,7 +163,7 @@
 <div id="plotting-data-from-the-tidy-dataframe" class="section level4">
 <h4 class="hasAnchor">
 <a href="#plotting-data-from-the-tidy-dataframe" class="anchor"></a>Plotting data from the tidy dataframe</h4>
-<p>Now that we have the data, we can plot it easily using [<em>ggplot2</em>] and the [<em>viridis</em>] package for the colour scale.</p>
+<p>Now that we have the data, we can plot it easily using <em>ggplot2</em> and <em>viridis</em> for the colour scale.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">"ggplot2"</span>)) {</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="kw">install.packages</span>(ggplot2)</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">}</a>
